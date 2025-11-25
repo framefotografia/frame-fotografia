@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Frame Fotografia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 20px;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-category {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .portfolio-title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            background: transparent;
+            border: 1px solid var(--gray-300);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--black);
+            color: var(--white);
+            border-color: var(--black);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Frame Logo" class="logo-img">
+                    <a href="index.html" class="logo-text">FRAME FOTOGRAFIA</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="portfolio.html" class="active">Portfólio</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 60vh; margin-top: 90px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Nosso Portfólio</h1>
+                <p>Uma seleção dos nossos trabalhos mais recentes e representativos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="services">
+        <div class="container">
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="ensaios">Ensaios</button>
+                <button class="filter-btn" data-filter="casamentos">Casamentos</button>
+                <button class="filter-btn" data-filter="eventos">Eventos</button>
+                <button class="filter-btn" data-filter="corporativo">Corporativo</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Ensaios -->
+                <div class="portfolio-item" data-category="ensaios">
+                    <img src="images/gallery/foto1.jpg" alt="Ensaio pessoal" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Ensaio</div>
+                        <div class="portfolio-title">Ensaio Pessoal</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="ensaios">
+                    <img src="images/gallery/foto2.jpg" alt="Ensaio de gestante" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Ensaio</div>
+                        <div class="portfolio-title">Ensaio Gestante</div>
+                    </div>
+                </div>
+
+                <!-- Casamentos -->
+                <div class="portfolio-item" data-category="casamentos">
+                    <img src="images/gallery/foto3.jpg" alt="Casamento tradicional" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Casamento</div>
+                        <div class="portfolio-title">Casamento Tradicional</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="casamentos">
+                    <img src="images/gallery/foto4.jpg" alt="Cerimônia íntima" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Casamento</div>
+                        <div class="portfolio-title">Cerimônia Íntima</div>
+                    </div>
+                </div>
+
+                <!-- Eventos -->
+                <div class="portfolio-item" data-category="eventos">
+                    <img src="images/gallery/foto5.jpg" alt="Evento corporativo" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Evento</div>
+                        <div class="portfolio-title">Evento Corporativo</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="eventos">
+                    <img src="images/gallery/foto6.jpg" alt="Festa de aniversário" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Evento</div>
+                        <div class="portfolio-title">Festa de Aniversário</div>
+                    </div>
+                </div>
+
+                <!-- Corporativo -->
+                <div class="portfolio-item" data-category="corporativo">
+                    <img src="images/gallery/foto1.jpg" alt="Fotos de produtos" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Corporativo</div>
+                        <div class="portfolio-title">Fotos de Produtos</div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="corporativo">
+                    <img src="images/gallery/foto2.jpg" alt="Retrato corporativo" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Corporativo</div>
+                        <div class="portfolio-title">Retrato Corporativo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Gostou do nosso trabalho?</h2>
+            <a href="contato.html" class="btn btn-dark">Solicitar Orçamento</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Frame Fotografia</h3>
+                    <p>Fotografia artística e profissional que transforma momentos em histórias visuais atemporais.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="servicos.html#ensaios">Ensaios</a></li>
+                        <li><a href="servicos.html#eventos">Eventos</a></li>
+                        <li><a href="servicos.html#esportivo">Esportivo</a></li>
+                        <li><a href="servicos.html#casamento">Casamento</a></li>
+                        <li><a href="servicos.html#retratos">Retratos</a></li>
+                        <li><a href="servicos.html#corporativo">Corporativo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>framefotografia.to@gmail.com</li>
+                        <li>(33) 99957-4292</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Frame Fotografia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Filtros do portfólio
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class de todos os botões
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Adiciona active class ao botão clicado
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

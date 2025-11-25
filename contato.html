@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Frame Fotografia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .contact-info {
+            padding: 40px;
+            background: var(--gray-100);
+            border-radius: 8px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--black);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-form {
+            padding: 40px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--gray-300);
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--black);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--black);
+            color: var(--white);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: var(--gray-800);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            filter: invert(1); /* Torna os ícones brancos */
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .form-explanation {
+            background: var(--gray-100);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Frame Logo" class="logo-img">
+                    <a href="index.html" class="logo-text">FRAME FOTOGRAFIA</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 60vh; margin-top: 90px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Entre em Contato</h1>
+                <p>Vamos conversar sobre o seu projeto e criar algo incrível juntos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="services">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2 style="margin-bottom: 30px;">Informações de Contato</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>framefotografia.to@gmail.com</p>
+                            <p>Respondemos em até 24 horas</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>(33) 99957-4292</p>
+                            <a href="https://wa.me/+553399574292?text=Ol%C3%A1!%20Eu%20gostaria%20de%20solicitar%20um%20or%C3%A7amento" class="whatsapp-btn">
+                                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893-.001-3.189-1.248-6.189-3.515-8.452"/>
+                                </svg>
+                                Enviar Mensagem
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h3>Localização</h3>
+                            <p>Atendemos em toda região</p>
+                            <p>Serviços in loco e em estúdio</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link" style="background: white;">
+                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" style="background: white;">
+                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/+553399574292?text=Ol%C3%A1!%20Eu%20gostaria%20de%20solicitar%20um%20or%C3%A7amento" class="social-link" style="background: qhite;">
+                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893-.001-3.189-1.248-6.189-3.515-8.452"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2 style="margin-bottom: 30px;">Solicitar Orçamento</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Serviço de Interesse</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="ensaios">Ensaios Fotográficos</option>
+                                <option value="casamento">Casamento</option>
+                                <option value="eventos">Eventos</option>
+                                <option value="corporativo">Cobertura Corporativa</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Data Prevista (opcional)</label>
+                            <input type="date" id="date" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" class="form-control" placeholder="Conte-nos mais sobre seu projeto..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    </form>
+                    
+                    <div class="form-explanation">
+                        <h4>Como funciona o formulário:</h4>
+                        <p>Após preencher e enviar o formulário:</p>
+                        <ol>
+                            <li>Seus dados serão enviados para nossa equipe</li>
+                            <li>Entraremos em contato em até 24 horas úteis</li>
+                            <li>Faremos uma análise detalhada do seu projeto</li>
+                            <li>Enviaremos uma proposta personalizada com valores e prazos</li>
+                            <li>Marcaremos uma conversa para alinhar todos os detalhes</li>
+                        </ol>
+                        <p><strong>Prefere contato direto?</strong> Utilize o botão do WhatsApp acima para uma resposta mais rápida!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div style="margin-top: 80px;">
+                <h2 style="text-align: center; margin-bottom: 50px;">Perguntas Frequentes</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--gray-200);">
+                        <h3>Quanto tempo leva para receber as fotos?</h3>
+                        <p>O prazo de entrega varia de acordo com o tipo de serviço. Para ensaios, o prazo é de 7 a 10 dias úteis. Para casamentos e eventos, o prazo é de 15 a 30 dias úteis.</p>
+                    </div>
+
+                    <div style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--gray-200);">
+                        <h3>Como funciona o agendamento?</h3>
+                        <p>Entre em contato conosco para verificar a disponibilidade da data. Para confirmar o agendamento, é necessário o pagamento de um sinal de 50% do valor total.</p>
+                    </div>
+
+                    <div style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--gray-200);">
+                        <h3>Fornecem os arquivos digitais?</h3>
+                        <p>Sim, todos os nossos pacotes incluem a entrega das fotos em alta resolução, tratadas e otimizadas para impressão e redes sociais.</p>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h3>Trabalham com álbuns físicos?</h3>
+                        <p>Sim, oferecemos álbuns de alta qualidade como opcional em nossos pacotes. Temos diferentes modelos e materiais para escolher.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Frame Fotografia</h3>
+                    <p>Fotografia artística e profissional que transforma momentos em histórias visuais atemporais.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="servicos.html#ensaios">Ensaios</a></li>
+                        <li><a href="servicos.html#eventos">Eventos</a></li>
+                        <li><a href="servicos.html#esportivo">Esportivo</a></li>
+                        <li><a href="servicos.html#casamento">Casamento</a></li>
+                        <li><a href="servicos.html#retratos">Retratos</a></li>
+                        <li><a href="servicos.html#corporativo">Corporativo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>framefotografia.to@gmail.com</li>
+                        <li><a href="https://wa.me/+553399574292?text=Ol%C3%A1!%20Eu%20gostaria%20de%20solicitar%20um%20or%C3%A7amento" style="color: var(--gray-400); text-decoration: none;">(33) 99957-4292</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Frame Fotografia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Coletar dados do formulário
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                date: document.getElementById('date').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Simulação de envio - em um ambiente real, isso seria enviado para um servidor
+            console.log('Dados do formulário:', formData);
+            
+            // Mensagem de confirmação
+            alert('Obrigado, ' + formData.name + '! Sua solicitação foi enviada com sucesso. Entraremos em contato em até 24 horas.');
+            
+            // Redirecionar para WhatsApp com mensagem pré-formatada (opcional)
+            const whatsappMessage = `Olá! Gostaria de solicitar um orçamento para ${formData.service}. Meu nome é ${formData.name}. ${formData.date ? `Data prevista: ${formData.date}.` : ''} ${formData.message}`;
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Limpar formulário
+            this.reset();
+            
+            // Opcional: Abrir WhatsApp com mensagem pré-preenchida
+            // window.open(`https://wa.me/+553399574292?text=${encodedMessage}`, '_blank');
+        });
+    </script>
+</body>
+</html>
